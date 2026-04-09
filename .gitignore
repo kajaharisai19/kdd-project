@@ -1,3 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
 venv/
-**/__pycache__/
-.env.env
+.venv/
+
+# Environment / secrets
+.env
+
+# Streamlit
+.streamlit/secrets.toml
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
