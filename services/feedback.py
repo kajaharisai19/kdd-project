@@ -12,7 +12,7 @@ import json
 import streamlit as st
 
 from data.content import FLAWED_EXPLANATIONS
-from services.claude_client import call_claude
+from services.llm_client import call_llm
 from services.knowledge import get_error_summary
 
 
@@ -55,7 +55,7 @@ Common errors for this type: {', '.join(question.get('common_errors', []))}
 
 Generate personalized adaptive feedback:"""
 
-    return call_claude(system, user, max_tokens=350)
+    return call_llm(system, user, max_tokens=350)
 
 
 def get_debug_feedback(flawed_explanation: str, student_critique: str, topic: str, concept: str) -> str:
@@ -93,7 +93,7 @@ Student's critique:
 
 Evaluate their response:"""
 
-    return call_claude(system, user, max_tokens=400)
+    return call_llm(system, user, max_tokens=400)
 
 
 def get_chat_response(user_message: str, topic: str) -> str:
@@ -120,4 +120,4 @@ Max 4 sentences unless showing a worked example."""
 
 Student: {user_message}"""
 
-    return call_claude(system, user, max_tokens=400)
+    return call_llm(system, user, max_tokens=400)
