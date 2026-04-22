@@ -15,8 +15,7 @@ AI-Enhanced Personalized Math Learning System
 Prerequisites
 
 - Python 3.10+ (3.8+ may work but 3.10+ is recommended).
-- git
-- Optionally: Ollama installed and running locally if you prefer local LLMs.
+- Ollama installed and running locally.
 
 1. Clone the repo
 
