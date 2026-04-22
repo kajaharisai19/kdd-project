@@ -18,19 +18,19 @@ def render_debug() -> None:
         unsafe_allow_html=True,
     )
 
-    st.markdown("""
-    <div class='card card-warn' style='margin-bottom:1.5rem;'>
-        <div style='display:flex;gap:1rem;align-items:center;flex-wrap:wrap;'>
-            <span class='badge badge-warn'>Lane (2023) — AI Literacy</span>
-            <span class='badge badge-teal'>Bloom's: Evaluate & Critique</span>
-            <span class='badge badge-blue'>AI4EDU — Critical Reasoning</span>
-            <p style='margin:0.5rem 0 0; font-size:0.85rem; color:#94A3B8;'>
-            Instead of asking the AI to solve problems for you, <em>you</em> are the expert who teaches the AI.
-            This develops the most important skill for an AI-literate generation: knowing when to trust AI and when to challenge it.
-            </p>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    # st.markdown("""
+    # <div class='card card-warn' style='margin-bottom:1.5rem;'>
+    #     <div style='display:flex;gap:1rem;align-items:center;flex-wrap:wrap;'>
+    #         <span class='badge badge-warn'>Lane (2023) — AI Literacy</span>
+    #         <span class='badge badge-teal'>Bloom's: Evaluate & Critique</span>
+    #         <span class='badge badge-blue'>AI4EDU — Critical Reasoning</span>
+    #         <p style='margin:0.5rem 0 0; font-size:0.85rem; color:#94A3B8;'>
+    #         Instead of asking the AI to solve problems for you, <em>you</em> are the expert who teaches the AI.
+    #         This develops the most important skill for an AI-literate generation: knowing when to trust AI and when to challenge it.
+    #         </p>
+    #     </div>
+    # </div>
+    # """, unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
     with col1:
