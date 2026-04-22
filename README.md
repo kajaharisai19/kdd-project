@@ -1,8 +1,6 @@
-# MathMentor AI (KDD-project)
+# MathMentor AI
 
 AI-Enhanced Personalized Math Learning System
-
-This repository contains a Streamlit demo application that showcases an AI-assisted, scaffolded math tutoring interface with practice, chat, debug (flawed-AI correction), and progress views.
 
 ## Features
 
@@ -83,25 +81,3 @@ Edit `data/content.py` to add topics, questions, hints, difficulty levels, commo
 
 Missing dependencies: re-run `pip install -r requirements.txt`.
 For Ollama, consult the Ollama docs; ensure the model you reference (e.g., `llama3.2`) is available locally.
-
-## Notes on safety and data
-
-This demo stores only ephemeral session-state in memory (via Streamlit session state). It is intended for demo and educational purposes and is not production-ready. If you plan to persist user data, add secure storage and follow applicable privacy regulations.
-
-## Suggested next steps (for contributors)
-
-- Add a `.env.example` with example environment variables.
-- Add automated tests for core `services/` logic and `state.py`.
-- Add more diverse question banks and a simple import script for CSV-backed content.
-
-## License
-
-This repository does not include a license file. Add a `LICENSE` file if you plan to share the project publicly and choose an appropriate license.
-
----
-
-If you'd like, I can also:
-- Add a `.env.example` file.
-- Update `requirements.txt` to include `ollama` and `python-dotenv` behind a `extras` or in a dev requirements file.
-- Add a short `CONTRIBUTING.md` with run/test/developer conventions.
-
