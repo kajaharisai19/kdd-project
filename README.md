@@ -9,7 +9,6 @@ AI-Enhanced Personalized Math Learning System
 - Lightweight service layer for calling LLMs (Ollama) in `services/`.
 - Session-state tracking in `state.py` for simple knowledge tracing and progress.
 - Modular UI in `ui/` (home, practice, debug, chat, progress, sidebar).
-- Theming via `config.py` (Streamlit CSS overrides).
 
 ## Quick start (recommended)
 
@@ -26,7 +25,7 @@ git clone <repo-url>
 cd KDD-project
 ```
 
-2. Create and activate a virtual environment (macOS / zsh)
+2. Create and activate a virtual environment
 
 ```bash
 python3 -m venv .venv
@@ -48,8 +47,7 @@ pip install ollama
 
 4. Configuration
 
-- The UI theme is defined in `config.py`. Call `apply_theme()` is already wired into `app.py`.
-The app is configured to use a local Ollama instance by default (see `services/llm_client.py`). Make sure Ollama is installed and the Ollama daemon is running locally; refer to the Ollama docs for install and run instructions.
+- The app is configured to use a local Ollama instance by default (see `services/llm_client.py`). Make sure Ollama is installed and the Ollama daemon is running locally; refer to the Ollama docs for install and run instructions.
 
 5. Run the app (Streamlit)
 
@@ -76,8 +74,3 @@ The app will open in your browser at the address printed by Streamlit (usually `
 ## Extending the dataset
 
 Edit `data/content.py` to add topics, questions, hints, difficulty levels, common errors, and flawed explanations. The UI reads this module to render practice items and flawed-explanation exercises.
-
-## Troubleshooting
-
-Missing dependencies: re-run `pip install -r requirements.txt`.
-For Ollama, consult the Ollama docs; ensure the model you reference (e.g., `llama3.2`) is available locally.
